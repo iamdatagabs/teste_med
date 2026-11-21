@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -20,12 +20,33 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Validate application JavaScript and catalog
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const html = fs.readFileSync('index.html', 'utf8');
+          const match = html.match(/<script>([\s\S]*?)<\/script>/);
+          if (!match) throw new Error('Inline application script not found');
+          new Function(match[1]);
+          const specialties = [...match[1].matchAll(/\{name:'([^']+)'/g)].map((item) => item[1]);
+          if (specialties.length !== 55) {
+            throw new Error(`Expected 55 recognized specialties; found ${specialties.length}`);
+          }
+          if (new Set(specialties).size !== specialties.length) {
+            throw new Error('Duplicate specialty names detected');
+          }
+          console.log('JavaScript syntax valid; 55 unique specialties found.');
+          NODE
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
+
       - name: Upload static files
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

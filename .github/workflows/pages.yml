@@ -17,6 +17,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,10 +30,10 @@ jobs:
           node <<'NODE'
           const fs = require('node:fs');
           const html = fs.readFileSync('index.html', 'utf8');
-          const match = html.match(/<script>([\s\S]*?)<\/script>/);
+          const match = html.match(/<script>([\\s\\S]*?)<\\/script>/);
           if (!match) throw new Error('Inline application script not found');
           new Function(match[1]);
-          const specialties = [...html.matchAll(/\{name:'([^']+)'/g)].map((item) => item[1]);
+          const specialties = [...html.matchAll(/\\{name:'([^']+)'/g)].map((item) => item[1]);
           if (specialties.length !== 55) {
             throw new Error('Expected 55 recognized specialties; found ' + specialties.length);
           }

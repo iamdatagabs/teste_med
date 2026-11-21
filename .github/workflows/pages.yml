@@ -22,6 +22,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Validate application JavaScript and catalog
+        shell: bash
         run: |
           node <<'NODE'
           const fs = require('node:fs');
@@ -29,9 +30,9 @@ jobs:
           const match = html.match(/<script>([\s\S]*?)<\/script>/);
           if (!match) throw new Error('Inline application script not found');
           new Function(match[1]);
-          const specialties = [...match[1].matchAll(/\{name:'([^']+)'/g)].map((item) => item[1]);
+          const specialties = [...html.matchAll(/\{name:'([^']+)'/g)].map((item) => item[1]);
           if (specialties.length !== 55) {
-            throw new Error(`Expected 55 recognized specialties; found ${specialties.length}`);
+            throw new Error('Expected 55 recognized specialties; found ' + specialties.length);
           }
           if (new Set(specialties).size !== specialties.length) {
             throw new Error('Duplicate specialty names detected');

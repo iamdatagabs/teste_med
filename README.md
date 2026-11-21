@@ -67,3 +67,9 @@ As respostas são processadas no navegador e não são transmitidas a uma API. O
 ## Licença e uso
 
 Protótipo em evolução. Antes de uso institucional, pesquisa formal ou divulgação como instrumento de orientação profissional, revisar conteúdo, acessibilidade, referências e requisitos éticos.
+
+## Aprofundamento do Top 3
+
+Após o ranking inicial, a pessoa pode optar por uma segunda etapa com 10 perguntas adicionais. Essa etapa compara somente as três especialidades mais bem pontuadas na avaliação inicial e produz um ranking refinado. A pontuação é uma comparação interna ao questionário, não uma medida de aptidão ou probabilidade de sucesso.
+
+O resultado refinado inclui atalhos para consultar a Comissão Nacional de Residência Médica (SisCNRM), o ENARE e pesquisas direcionadas a programas de residência. Os atalhos não confirmam que uma instituição oferece vaga na especialidade nem que exista edital aberto; credenciamento, pré-requisitos e editais devem ser verificados diretamente nas fontes oficiais. A curadoria de uma lista de serviços específicos depende da região de interesse.

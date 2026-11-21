@@ -21,7 +21,7 @@ Abra `index.html` em um navegador moderno. Para publicar, habilite GitHub Pages 
 
 A lista de especialidades foi conferida com a **Resolução CFM nº 2.472, de 24 de setembro de 2026**, publicada no Diário Oficial da União em 28 de outubro de 2026, que homologa a Portaria CME nº 1/2026 e revoga a Resolução CFM nº 2.380/2024.
 
-- [Resolução CFM nº 2.472/2026 — texto publicado no DOU (PDF)](https://cdn.medblog.estrategiaeducacional.com.br/wp-content/uploads/2026/10/RESOLUCAO-CFM-No-2.472-DE-24-DE-SETEMBRO-DE-2026-RESOLUCAO-CFM-No-2.472-DE-24-DE-SETEMBRO-DE-2026-DOU-Imprensa-Nacional.pdf)
+- [Resolução CFM nº 2.472/2026 — texto publicado no DOU (PDF)](https://www.in.gov.br/web/dou/-/resolucao-cfm-n-2.472-de-24-de-setembro-de-2026-740664066)
 - [Portal CFM — busca de normas](https://portal.cfm.org.br/buscar-normas-cfm-e-crm/)
 
 O catálogo do questionário apresenta as especialidades médicas. **Áreas de atuação são categorias regulatórias distintas** e não são misturadas ao ranking de especialidades.

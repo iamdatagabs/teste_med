@@ -2,7 +2,7 @@
 
 Aplicação web estática para apoiar a reflexão sobre interesses, preferências de trabalho e afinidades com especialidades médicas.
 
-## Escopo atual
+**Aplicação:** [Abrir MedVoca no GitHub Pages](https://iamdatagabs.github.io/teste_med/) · **Portfólio:** [Gabriel Passos](https://iamdatagabs.github.io/iamdatagabs/portfolio/)\n\n## Escopo atual
 
 - Três percursos: Expressa (12 questões), Intermediária (24) e Completa (36).
 - Questões de escolha única e múltipla seleção.
